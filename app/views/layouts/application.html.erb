@@ -10,9 +10,15 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/header" %>
-    <%= yield %>
-    <%= render partial: "layouts/footer" %>
+    <div class="container">
+      <%= render partial: "layouts/header" %>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= yield %>
+        </div>
+      </div>
+      <%= render partial: "layouts/footer" %>
+    </div>
   </body>
 </html>
   

@@ -32,14 +32,12 @@
             <p class="h5 mb-4">Up and coming Communities</p>
             <div class="card">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <% @communities.each do |community| %>
+                        <li class="list-group-item"><%= link_to community.name, community_path(community) %></li>
+                    <% end %>
                 </ul>
             </div>
-            <%= link_to "View all", "", class: "btn btn-primary mt-3" %>
+            <%= link_to "View all", communities_path, class: "btn btn-primary mt-3" %>
         </div>
     </div>
 </div>
