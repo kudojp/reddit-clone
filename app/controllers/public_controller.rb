@@ -1,4 +1,4 @@
-git class PublicController < ApplicationController
+class PublicController < ApplicationController
 
     def index
     end
