@@ -3,10 +3,11 @@
 <h3><%= @community.name %></h3>
 
 <div class="row">
-    <div class="col-8">
+    <div class="col-sm-8">
         <%= render partial: "posts/list", locals: { posts: @posts }%>
     </div>
-    <div class="col-4">
+    <div class="col-sm-4">
+        <p><%= pluralize @subscriber_count, "member" %></p>
         <small>
             <%= simple_format @community.rules %>
         </small>
