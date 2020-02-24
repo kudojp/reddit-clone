@@ -5,6 +5,8 @@ class Account < ApplicationRecord
          :registerable, :recoverable, :rememberable, :validatable
   has_many :communities, through: :subscriptions
   has_many :posts
+  has_many :comments
+  
   validates_presence_of :first_name, :last_name, :username
 
   def full_name

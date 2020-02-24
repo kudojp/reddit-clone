@@ -22,7 +22,7 @@ class CommunitiesController < ApplicationController
         @community.account_id = current_account.id
 
         if @community.save
-            redirect_to communities_path
+            redirect_to community_path(@community)
         else
             render :new
         end
