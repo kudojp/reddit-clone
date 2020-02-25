@@ -1,4 +1,4 @@
-<% posts.each do |post| %>
+<% posts.sort_by{ |p| p.score }.reverse.each do |post| %>
 <div class="card p-3 mb-3">
     <div class="row">
         <div class="col-1 text-center">
