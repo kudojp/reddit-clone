@@ -1,0 +1,18 @@
+console.log("vote has been saved...");
+
+// update total votes on view for post
+$("#vote-actions-<%= @post.id %> .score").text("<%= @post.score %>");
+
+// update the activeness of up-arrow (by getting state every time)
+<% if is_upvoted(@post) %>
+    $("#vote-actions-<%= @post.id %> .upvote").addClass("active")
+<% else %>
+    $("#vote-actions-<%= @post.id %> .upvote").removeClass("active")
+<% end %>
+
+// update the activeness of down-arrow (by getting state every time)
+<% if is_downvoted(@post) %>
+    $("#vote-actions-<%= @post.id %> .downvote").addClass("active")
+<% else %>
+    $("#vote-actions-<%= @post.id %> .downvote").removeClass("active")
+<% end %>
