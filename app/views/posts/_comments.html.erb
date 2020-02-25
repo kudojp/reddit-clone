@@ -1,4 +1,6 @@
 <% comments.each do |comment| %>
-    <%= link_to comment.account.full_name, profile_path(comment.account.username) %>
-    <%= simple_format comment.message %>
+    <div class="card p-1 mb-1">
+        <%= link_to comment.account.full_name, profile_path(comment.account.username) %>
+        <%= simple_format comment.message %>
+    </div>
 <% end %>
