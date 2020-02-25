@@ -21,4 +21,10 @@ class Account < ApplicationRecord
   def downvoted_post_ids
     self.votes.where(upvote: false).pluck(:post_id)
   end
+
+  def karma
+    karma = 0
+    self.posts.each{ |post| karma += post.score}
+    return karma
+  end
 end
