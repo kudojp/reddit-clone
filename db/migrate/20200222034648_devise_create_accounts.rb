@@ -1,6 +1,3 @@
-git remote add origin git@github.com:kudojp/reddit-clone.git
-# frozen_string_literal: true
-
 class DeviseCreateAccounts < ActiveRecord::Migration[6.0]
   def change
     create_table :accounts do |t|
