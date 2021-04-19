@@ -92,9 +92,9 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.9)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.10.0)
+    jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
@@ -247,7 +247,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   font-awesome-sass
-  jbuilder (~> 2.7)
+  jbuilder (~> 2.11)
   jquery-rails
   listen (>= 3.0.5, < 3.6)
   pg
