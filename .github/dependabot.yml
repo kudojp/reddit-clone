@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rubocop
+    versions:
+    - 1.11.0
+    - 1.12.0
+  - dependency-name: listen
+    versions:
+    - 3.4.1
+  - dependency-name: rails
+    versions:
+    - 6.1.3
